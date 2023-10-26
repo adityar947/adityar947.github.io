@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <title>Aditya Ranjan - DevOps Engineer</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>Aditya Ranjan</h1>
+            <h2 style="color:white;"">DevOps Engineer</h2>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+            </ul>
+        </nav>
+    </header>
+<div class="container">
+    <section id="about">
+        <h2>About Me</h2>
+        <p>Your introduction here.</p>
+    </section>
+
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul>
+            <li>Linux System Administration</li>
+            <li>Shell Scripting</li>
+            <li>Git & Github</li>
+            <li>Maven, Gradle</li>
+            <li>Apache / Nginx Web Server & Tomcat</li>
+            <li>MySQL</li>
+            <li>Python</li>
+            <li>AWS - CLI, S3, EC2, RDS, VPC, IAM, Route53, EBS, ELB, Lambda</li>
+            <li>Docker</li>
+            <li>Jenkins</li>
+        </ul>
+    </section>
+
+    <section id="experience">
+        <h2>Experience</h2>
+        <div class="job">
+            <h3>DevOps Intern</h3>
+            <p>AmberTag Analytics Pvt. Ltd.</p>
+            <p>• Developed and maintained shell scripts to automate various deployment tasks.<br>• Utilized GitHub for version control, collaborate, track changes, and ensure integration.<br>• Implemented Docker containers for reproducible and isolated environments, simplifying app deployment and enabling scalability.<br>• Configured and managed Jenkins pipelines, creating CI/CD workflows to automate build, test, and deployment processes.<br>• Deployed applications on Apache Tomcat, handling configuration and troubleshooting issues to ensure smooth deployment and availability.</p>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2>Personal Projects</h2>
+        <div class="project">
+            <h3>Setting up the CI/CD with Github, Jenkins, Maven, Tomcat & Docker</h3>
+            <p>Integrated Jenkins with Git using "GitHub 1.36.1" plugin. Integrated Jenkins with Maven using the "Maven Integration" plugin. Integrated Jenkins with Tomcat using "Deploy to Container" plugin. Integrated Jenkins with Docker using the "Publish over SSH" plugin.</p>
+        </div>
+        <div class="project">
+            <h3>Creating a CI/CD pipeline with AWS CodePipeline</h3>
+            <p>Implemented a pipeline to automate software delivery, consisting of building code, running tests, and secure deployment. GitHub has been used for SCM, and an S3 bucket for deployment. Changes in GitHub triggered the CodePipeline, updating the website.</p>
+        </div>
+        <div class="project">
+            <h3>Deployed end-to-end Application for Django</h3>
+            <p>Used an Open Source project based on Django from Github, made a Docker file and did containerization, then launched it on AWS EC2 through Jenkins CI/CD tools, then connected it with RDS and stored in a bucket and performed Elastic Load Balancing.</p>
+        </div>
+        <div class="project">
+            <h3>Accessing cross-account AWS S3 objects</h3>
+            <p>Created IAM role and attached policies, wrote a Lambda function and selected assumeRole then parsed JSON file.</p>
+        </div>
+    </section>
+</div>
+
+    <script src="script.js"></script>
+</body>
+</html>
