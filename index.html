@@ -350,6 +350,54 @@ across development and production environments.</li>
             </div>
         </section>
 
+        <!-- Blog Section -->
+        <section id="medium-posts" class="mb-12 card">
+          <h2 class="text-2xl font-semibold section-title">Latest Blog Posts</h2>
+          <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+        </section>
+        
+        <script>
+          const FEED_URL = 'https://medium.com/feed/@adityar947';
+          const API = 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(FEED_URL);
+        
+          fetch(API)
+            .then(res => res.json())
+            .then(data => {
+              const container = document.getElementById('posts-container');
+              data.items.forEach(post => {
+                // Try to get thumbnail field
+                let imgUrl = post.thumbnail;
+        
+                // If not available, extract from description via regex
+                if (!imgUrl) {
+                  const match = post.description.match(/<img[^>]+src="([^">]+)"/);
+                  if (match) imgUrl = match[1];
+                }
+        
+                // Fallback transparent pixel if no image found
+                if (!imgUrl) imgUrl = 'data:image/gif;base64,R0lGODlhAQABAAAAACw=';
+                
+                const card = document.createElement('a');
+                card.href = post.link;
+                card.target = "_blank";
+                card.className = `block bg-[#111] rounded-lg overflow-hidden shadow hover:shadow-lg transition`;
+        
+                card.innerHTML = `
+                  <img src="${imgUrl}" alt="${post.title}" class="w-full h-48 object-cover bg-gray-800">
+                  <div class="p-4">
+                    <h3 class="text-lg font-semibold text-white">${post.title}</h3>
+                    <p class="text-gray-400 mt-2">${post.description.replace(/<[^>]+>/g, '').slice(0, 100)}…</p>
+                  </div>
+                `;
+                container.appendChild(card);
+              });
+            })
+            .catch(err => {
+              console.error(err);
+              document.getElementById('posts-container').innerText = 'Error loading posts';
+            });
+        </script>
+    
         <!-- Education Section -->
         <section class="mb-12 card">
             <h2 class="text-2xl font-semibold section-title">Education</h2>
