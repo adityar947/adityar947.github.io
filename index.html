@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Aditya Ranjan - DevOps Engineer</title>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: #000000;
+      color: #f3f4f6;
+    }
+
+    .section-title {
+      position: relative;
+      padding-bottom: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .section-title::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 50px;
+      height: 3px;
+      background-color: #8b5cf6; /* Lighter purple for contrast */
+      border-radius: 9999px;
+    }
+
+    .card {
+      background-color: #111111;
+      border-radius: 1rem;
+      box-shadow: 0 4px 10px rgba(255, 255, 255, 0.05);
+      padding: 1.5rem;
+      transition: all 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(255, 255, 255, 0.08);
+    }
+
+    .skill-badge {
+      background-color: #1f2937;
+      color: #c084fc;
+      padding: 0.4rem 0.8rem;
+      border-radius: 0.5rem;
+      font-weight: 500;
+      font-size: 0.875rem;
+      display: inline-flex;
+      align-items: center;
+    }
+
+    .skill-badge svg {
+      margin-right: 0.4rem;
+    }
+
+    /* Custom Scrollbar */
+    ::-webkit-scrollbar {
+      width: 8px;
+      height: 8px;
+    }
+    ::-webkit-scrollbar-track {
+      background: #1f2937;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #6b21a8;
+      border-radius: 10px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #a855f7;
+    }
+
+    a {
+      color: #a78bfa;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+
+<body class="antialiased text-gray-200">
+  <div class="container mx-auto p-4 md:p-8 max-w-6xl">
+    <!-- Header Section -->
+    <header class="text-center mb-12 bg-gradient-to-r from-purple-700 to-indigo-900 text-white p-8 rounded-xl shadow-lg">
+      <h1 class="text-4xl md:text-5xl font-bold mb-2">Aditya Ranjan</h1>
+      <p class="text-xl md:text-2xl font-light">DevOps Engineer</p>
+      <div class="flex flex-wrap justify-center items-center gap-4 mt-6 text-sm md:text-base">
+        <a href="mailto:adityar947@gmail.com" class="flex items-center hover:underline">
+          <i class="fas fa-envelope mr-2"></i> adityar947@gmail.com
+        </a>
+        <a href="https://www.linkedin.com/in/aditya-ranjan-link" target="_blank" class="flex items-center hover:underline">
+          <i class="fab fa-linkedin mr-2"></i> LinkedIn
+        </a>
+        <a href="https://github.com/aditya-ranjan-github" target="_blank" class="flex items-center hover:underline">
+          <i class="fab fa-github mr-2"></i> GitHub
+        </a>
+        <a href="https://medium.com/@aditya-ranjan-medium" target="_blank" class="flex items-center hover:underline">
+          <i class="fab fa-medium mr-2"></i> Medium
+        </a>
+      </div>
+    </header>
+
+    <!-- The rest of your content remains unchanged except for the color scheme -->
+    <!-- Use card containers, dark section titles, light text, etc., just like above -->
+
+
+
+    <!-- <header class="text-center mb-12 bg-gradient-to-r from-indigo-500 to-purple-600 text-white p-8 rounded-xl shadow-lg">
+            <h1 class="text-4xl md:text-5xl font-bold mb-2">Aditya Ranjan</h1>
+            <p class="text-xl md:text-2xl font-light">DevOps Engineer</p> -->
+            <!-- <p <span class="flex flex-wrap justify-center items-center gap-4 mt-6 text-sm md:text-base">
+                <i class="fas fa-map-marker-alt mr-2"></i>Bengaluru, India
+            </span></p> -->
+            <!-- <div class="flex flex-wrap justify-center items-center gap-4 mt-6 text-sm md:text-base">
+                
+                <a href="mailto:adityar947@gmail.com" class="flex items-center text-white hover:underline">
+                    <i class="fas fa-envelope mr-2"></i> adityar947@gmail.com
+                </a>
+                <a href="https://www.linkedin.com/in/aditya-ranjan-link" target="_blank" class="flex items-center text-white hover:underline">
+                    <i class="fab fa-linkedin mr-2"></i> LinkedIn
+                </a>
+                <a href="https://github.com/aditya-ranjan-github" target="_blank" class="flex items-center text-white hover:underline">
+                    <i class="fab fa-github mr-2"></i> GitHub
+                </a>
+                <a href="https://medium.com/@aditya-ranjan-medium" target="_blank" class="flex items-center text-white hover:underline">
+                    <i class="fab fa-medium mr-2"></i> Medium
+                </a>
+                
+            </div>
+        </header> -->
+
+        <!-- Professional Summary -->
+        <section class="mb-12 card">
+            <h2 class="text-2xl font-semibold section-title">Professional Summary</h2>
+            <p class="text-white leading-relaxed">
+                As a DevOps engineer with hands-on experience over the past two years, I focus on automating software delivery,
+                managing secure and scalable cloud infrastructure, and integrating security practices into CI/CD workflows.
+                Experienced with Docker, Kubernetes, Terraform, Ansible, and monitoring tools for distributed systems. I document
+                and share practical solutions to real-world engineering problems through blogs on Medium, helping others adopt
+                clean, reliable DevOps practices. Strong focus on simplifying deployment, improving system reliability, and
+                applying infrastructure-as-code principles in fast-moving environments.
+            </p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="mb-12 card">
+            <h2 class="text-2xl font-semibold section-title">Skills</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Cloud Platforms -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-cloud mr-2 text-indigo-500"></i>Cloud Platforms</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">AWS</span>
+                        <span class="skill-badge">Azure</span>
+                    </div>
+                </div>
+                <!-- CI/CD Tools -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-pipe mr-2 text-indigo-500"></i>CI/CD Tools</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Jenkins</span>
+                        <span class="skill-badge">GitHub Actions</span>
+                        <span class="skill-badge">GitLab CI</span>
+                        <span class="skill-badge">Codepipeline</span>
+                        <span class="skill-badge">ArgoCD</span>
+                    </div>
+                </div>
+                <!-- Containerization -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-docker mr-2 text-indigo-500"></i>Containerization</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Docker</span>
+                        <span class="skill-badge">Docker Swarm</span>
+                        <span class="skill-badge">ECS</span>
+                        <span class="skill-badge">Kubernetes</span>
+                        <span class="skill-badge">EKS</span>
+                        <span class="skill-badge">Helm</span>
+                    </div>
+                </div>
+                <!-- IaC & Configuration -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-code mr-2 text-indigo-500"></i>IaC & Configuration</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Terraform</span>
+                        <span class="skill-badge">Ansible</span>
+                    </div>
+                </div>
+                <!-- Version Control -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-code-branch mr-2 text-indigo-500"></i>Version Control</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Git</span>
+                        <span class="skill-badge">GitHub</span>
+                        <span class="skill-badge">GitLab</span>
+                        <span class="skill-badge">CodeCommit</span>
+                    </div>
+                </div>
+                <!-- Scripting Languages -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-laptop-code mr-2 text-indigo-500"></i>Scripting Languages</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Bash</span>
+                        <span class="skill-badge">Python</span>
+                    </div>
+                </div>
+                <!-- Monitoring & Logging -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-chart-line mr-2 text-indigo-500"></i>Monitoring & Logging</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Prometheus</span>
+                        <span class="skill-badge">Grafana</span>
+                        <span class="skill-badge">Datadog</span>
+                        <span class="skill-badge">ELK Stack</span>
+                        <span class="skill-badge">CloudWatch</span>
+                        <span class="skill-badge">New Relic</span>
+                    </div>
+                </div>
+                <!-- Web Servers -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-server mr-2 text-indigo-500"></i>Web Servers</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Nginx</span>
+                        <span class="skill-badge">Apache</span>
+                    </div>
+                </div>
+                <!-- Databases -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-database mr-2 text-indigo-500"></i>Databases</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">MySQL</span>
+                        <span class="skill-badge">PostgreSQL</span>
+                        <span class="skill-badge">MongoDB</span>
+                        <span class="skill-badge">Redis</span>
+                        <span class="skill-badge">Elasticsearch</span>
+                    </div>
+                </div>
+                <!-- Operating Systems -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-desktop mr-2 text-indigo-500"></i>Operating Systems</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">Linux (Ubuntu, CentOS)</span>
+                        <span class="skill-badge">Windows Server</span>
+                    </div>
+                </div>
+                <!-- Networking Concepts -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-network-wired mr-2 text-indigo-500"></i>Networking Concepts</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">TCP/IP</span>
+                        <span class="skill-badge">DNS</span>
+                        <span class="skill-badge">VPNs</span>
+                        <span class="skill-badge">Load Balancing</span>
+                    </div>
+                </div>
+                <!-- Other Tools/Concepts -->
+                <div>
+                    <h3 class="text-lg font-medium text-gray-100 mb-3 flex items-center"><i class="fas fa-tools mr-2 text-indigo-500"></i>Other Tools/Concepts</h3>
+                    <div class="flex flex-wrap gap-2">
+                        <span class="skill-badge">GitOps</span>
+                        <span class="skill-badge">Agile Methodologies</span>
+                        <span class="skill-badge">RESTful APIs</span>
+                        <span class="skill-badge">Microservices Architecture</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+
+        <!-- Experience Section -->
+        <section class="mb-12 card">
+            <h2 class="text-2xl font-semibold section-title">Experience</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-white">DevOps Engineer</h3>
+                <p class="text-white">AmberTag Analytics Pvt. Ltd. | Bengaluru, Karnataka, India</p>
+                <p class="text-gray-200 text-sm">June 2023 – Present</p>
+                <ul class="list-disc list-inside text-gray-200 mt-2 space-y-1">
+                    <li><b>Configured and optimized CI/CD pipelines</b> using Jenkins, GitLab CI, and AWS CodePipeline, cutting release cycle duration by 30% and improving deployment reliability.</li>
+                    <li><b>Provisioned scalable cloud infrastructure</b> on AWS via Terraform and Ansible, reducing environment setup time by 70% and maintaining 99.9% production uptime.</li>
+                    <li><b>Containerized and orchestrated</b> microservices with Docker and Kubernetes, increasing deployment scalability and cross-environment consistency.</li>
+                    <li><b>Implemented DevSecOps tooling</b> (SCA, SAST, DAST) within pipelines, enabling early vulnerability detection and reducing post-deployment security issues.</li>
+                    <li><b>Created serverless APIs</b> using AWS Lambda and API Gateway; enabled RDS event handling with EventBridge
+and SQS DLQs, eliminating manual rollback steps.</li>
+                    <li><b>Enhanced observability</b> with Prometheus, Grafana, and Datadog; reduced mean time to recovery (MTTR) by 25% through proactive monitoring and root cause analysis.</li>
+                    <li><b>Scripted repeatable operations</b> using Python, Bash, and Ansible, saving ~20+ hours/month in manual maintenance tasks.</li>
+                    <li><b>Adopted GitOps with ArgoCD</b>, enabling declarative infrastructure updates and improving deployment traceability and rollback efficiency.</li>
+                    <li><b>Integrated automated testing</b> into CI/CD workflows, lowering post-release defects by 40% and ensuring higher confidence in production pushes.</li>
+                    <li><b>Produced detailed architecture diagrams</b> and CI/CD documentation using Draw.io, improving onboarding speed and internal knowledge transfer.</li>
+                    <li><b>Managed Git workflows in GitHub</b>, enforced code review standards, and reduced merge conflicts by introducing branching best practices.</li>
+                </ul>
+            </div>
+        </section>
+
+
+        <!-- Projects Section -->
+        <section class="mb-12 card">
+            <h2 class="text-2xl font-semibold section-title">Projects</h2>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-white">DevSecOps CI/CD Pipeline for Microservices Application</h3>
+                <p class="text-white">AmberTag Analytics Pvt. Ltd.</p>
+                <!-- <p class="text-gray-600 text-sm">March 2023 – Present</p> -->
+                <ul class="list-disc list-inside text-gray-200 mt-2 space-y-1">
+                    <li>Designed and implemented a complete CI/CD pipeline from scratch for a microservices-based web application using <b>Jenkins, Docker, and Kubernetes</b>.</li>
+                    <li>Streamlined the build, test, and deployment of five microservices into a Kubernetes cluster, reducing manual deployment time by <b>80%</b>.</li>
+                    <li>Integrated <b>SonarQube</b> (SAST), <b>Trivy</b> (container vulnerability scanning), and <b>OWASP ZAP</b> (DAST) into the pipeline to enforce security and code quality throughout the development lifecycle.</li>
+                    <li>Deployed <b>Prometheus</b>, <b>cAdvisor</b> and <b>Grafana</b> for real-time monitoring and alerting of application performance and infrastructure health.</li>
+                    <li>Used <b>Ansible</b> to automate configuration management and environment provisioning, ensuring consistent setups
+across development and production environments.</li>
+                </ul>
+            </div>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-white">DevSecOps CI/CD Pipeline for Microservices Application</h3>
+                <p class="text-white">AmberTag Analytics Pvt. Ltd.</p>
+                <!-- <p class="text-gray-600 text-sm">March 2023 – Present</p> -->
+                <ul class="list-disc list-inside text-gray-200 mt-2 space-y-1">
+                    <li>Orchestrated the deployment of AWS services like VPC, IAM roles, and security groups, EC2, Target Group, ALB, ASG, S3, Route53, CodePipeline, CodeBuild, CodeDeploy.</li>
+                    <li>Developed and maintained infrastructure as code (IaC) using Terraform for provisioning and managing AWS resources, ensuring consistent, scalable & maintainable infrastructure.</li>
+                    <li>Leveraged Ansible to automate post-provisioning configuration tasks, ensuring consistent setup of EC2 instances and seamless integration with deployed AWS services.</li>
+                </ul>
+            </div>
+            <div class="mb-6">
+                <h3 class="text-xl font-semibold text-white">AWS Metric Data Downloader Application</h3>
+                <p class="text-white">AmberTag Analytics Pvt. Ltd.</p>
+                <!-- <p class="text-gray-600 text-sm">Project</p> -->
+                <ul class="list-disc list-inside text-gray-200 mt-2 space-y-1">
+                    <li>Engineered a Streamlit-based Python application to fetch and download AWS CloudWatch metrics using AWS CLI commands.</li>
+                    <li>The app provides a user-friendly interface to select services, define time ranges, and download metric data in CSV format.</li>
+                    <li>Streamlined the monitoring process by enabling quick access to key performance metrics without navigating the AWS Console.</li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-xl font-semibold text-white">Developed WhatsApp Alert System with Selenium Integration</h3>
+                <p class="text-white">AmberTAG Analytics Pvt. Ltd.</p>
+                <!-- <p class="text-gray-600 text-sm">Project</p> -->
+                <ul class="list-disc list-inside text-gray-200 mt-2 space-y-1">
+                    <li>Built a Selenium-based automation system to send WhatsApp alerts.</li>
+                    <li>Created a shell script integrated with crontab to monitor the production server's status and automatically restart it during downtime.</li>
+                    <li>Implemented failure detection and recovery logic, followed by WhatsApp notifications upon successful restart, ensuring high availability and real-time alerting.</li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- Education Section -->
+        <section class="mb-12 card">
+            <h2 class="text-2xl font-semibold section-title">Education</h2>
+            <div class="mb-4">
+                <h3 class="text-xl font-semibold text-white">B.E Computer Science and Engineering</h3>
+                <p class="text-gray-200">Nagarjana College of Engg. & Tech. Bengaluru, Karnataka</p>
+                <p class="text-white text-sm">July 2023</p>
+            </div>
+        </section>
+
+        <!-- Certificates Section -->
+        <section class="mb-12 card">
+            <h2 class="text-2xl font-semibold section-title">Certificates</h2>
+            <ul class="list-disc list-inside text-white mt-2 space-y-1">
+                <li>DevOps on AWS: Specialization</li>
+                <li>AWS Cloud Architecting</li>
+            </ul>
+        </section>
+
+
+
+
+    <!-- Footer -->
+    <footer class="text-center text-gray-100 text-sm mt-12 p-4 border-t border-gray-700">
+      <p>&copy; 2025 Aditya Ranjan. All rights reserved.</p>
+    </footer>
+  </div>
+</body>
+</html>
