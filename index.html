@@ -393,6 +393,38 @@ across development and production environments.</li>
               document.getElementById('posts-container').innerText = 'Error loading posts';
             });
         </script>
+
+    <!-- Github Section -->
+    <script>
+  const GITHUB_USERNAME = "adityar947";
+
+  fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('github-repos');
+      data.forEach(repo => {
+        const imageUrl = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${repo.name}/main/cover.png`;
+
+        const card = document.createElement('a');
+        card.href = repo.html_url;
+        card.target = "_blank";
+        card.className = `block bg-[#111] rounded-lg overflow-hidden shadow hover:shadow-lg transition`;
+
+        card.innerHTML = `
+          <img src="${imageUrl}" alt="${repo.name}" class="w-full h-48 object-cover">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">${repo.name}</h3>
+            <p class="text-gray-400 mt-2">${repo.description || 'No description provided.'}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      document.getElementById('github-repos').innerText = "Failed to load GitHub projects.";
+    });
+</script>
     
         <!-- Education Section -->
         <section class="mb-12 card">
