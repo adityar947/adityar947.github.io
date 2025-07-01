@@ -394,41 +394,52 @@ across development and production environments.</li>
             });
         </script>
 
-        <!-- Github Section -->
-        <script>
-        const GITHUB_USERNAME = "adityar947";
+        <!-- HTML SECTION: GitHub Projects -->
+<section class="mb-12 card">
+  <h2 class="text-2xl font-semibold section-title">GitHub Projects</h2>
+  <div id="github-repos" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
+</section>
 
-fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`)
-  .then(res => res.json())
-  .then(data => {
-    const container = document.getElementById('github-repos');
-    container.innerHTML = ''; // Clear any previous content
+<!-- Put the script right after this -->
+<script>
+  const GITHUB_USERNAME = "adityar947";
 
-    data.forEach(repo => {
-      // Use jsDelivr CDN to fetch cover image from main branch
-      const imageUrl = `https://cdn.jsdelivr.net/gh/${GITHUB_USERNAME}/${repo.name}@main/cover.png`;
+  fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`)
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById('github-repos');
+      if (!container) {
+        console.error("Element with ID 'github-repos' not found.");
+        return;
+      }
 
-      const card = document.createElement('a');
-      card.href = repo.html_url;
-      card.target = "_blank";
-      card.rel = "noopener noreferrer"; // security best practice
-      card.className = 'block bg-[#111] rounded-lg overflow-hidden shadow hover:shadow-lg transition';
+      container.innerHTML = '';
+      data.forEach(repo => {
+        const imageUrl = `https://cdn.jsdelivr.net/gh/${GITHUB_USERNAME}/${repo.name}@main/cover.png`;
 
-      card.innerHTML = `
-        <img src="${imageUrl}" alt="${repo.name} cover image" class="w-full h-48 object-cover" onerror="this.style.display='none'">
-        <div class="p-4">
-          <h3 class="text-lg font-semibold text-white">${repo.name}</h3>
-          <p class="text-gray-400 mt-2">${repo.description || 'No description provided.'}</p>
-        </div>
-      `;
-      container.appendChild(card);
+        const card = document.createElement('a');
+        card.href = repo.html_url;
+        card.target = "_blank";
+        card.className = 'block bg-[#111] rounded-lg overflow-hidden shadow hover:shadow-lg transition';
+
+        card.innerHTML = `
+          <img src="${imageUrl}" alt="${repo.name} cover image" class="w-full h-48 object-cover" onerror="this.style.display='none'">
+          <div class="p-4">
+            <h3 class="text-lg font-semibold text-white">${repo.name}</h3>
+            <p class="text-gray-400 mt-2">${repo.description || 'No description provided.'}</p>
+          </div>
+        `;
+        container.appendChild(card);
+      });
+    })
+    .catch(err => {
+      console.error(err);
+      const container = document.getElementById('github-repos');
+      if (container) {
+        container.innerText = "Failed to load GitHub projects.";
+      }
     });
-  })
-  .catch(err => {
-    console.error(err);
-    document.getElementById('github-repos').innerText = "Failed to load GitHub projects.";
-  });
-        </script>
+</script>
 
     
         <!-- Education Section -->
