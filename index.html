@@ -403,7 +403,7 @@ across development and production environments.</li>
           .then(data => {
         const container = document.getElementById('github-repos');
         data.forEach(repo => {
-        const imageUrl = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${repo.name}/main/cover.png`;
+        const imageUrl = `https://cdn.jsdelivr.net/gh/${GITHUB_USERNAME}/${repo.name}@main/cover.png`;
 
         const card = document.createElement('a');
         card.href = repo.html_url;
