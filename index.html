@@ -394,15 +394,15 @@ across development and production environments.</li>
             });
         </script>
 
-    <!-- Github Section -->
-    <script>
-  const GITHUB_USERNAME = "adityar947";
+        <!-- Github Section -->
+        <script>
+        const GITHUB_USERNAME = "adityar947";
 
-  fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`)
-    .then(res => res.json())
-    .then(data => {
-      const container = document.getElementById('github-repos');
-      data.forEach(repo => {
+        fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=6`)
+          .then(res => res.json())
+          .then(data => {
+        const container = document.getElementById('github-repos');
+        data.forEach(repo => {
         const imageUrl = `https://raw.githubusercontent.com/${GITHUB_USERNAME}/${repo.name}/main/cover.png`;
 
         const card = document.createElement('a');
@@ -418,13 +418,13 @@ across development and production environments.</li>
           </div>
         `;
         container.appendChild(card);
-      });
-    })
-    .catch(err => {
-      console.error(err);
-      document.getElementById('github-repos').innerText = "Failed to load GitHub projects.";
-    });
-</script>
+        });
+        })
+        .catch(err => {
+        console.error(err);
+        document.getElementById('github-repos').innerText = "Failed to load GitHub projects.";
+        });
+        </script>
     
         <!-- Education Section -->
         <section class="mb-12 card">
